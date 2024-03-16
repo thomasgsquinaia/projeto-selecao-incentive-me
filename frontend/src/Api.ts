@@ -3,7 +3,8 @@ import { BalanceData, UpdateBalanceData } from "./interface/balance";
 import { PaymentsData } from "./interface/payments";
 import { UsersData } from "./interface/users";
 
-export const BASE_API = 'http://localhost:3001/v1';
+// export const BASE_API = 'http://localhost:3001/v1';
+export const BASE_API = 'https://projeto-selecao-incentive-me.onrender.com';
 
 type Login = {
     email: string;
