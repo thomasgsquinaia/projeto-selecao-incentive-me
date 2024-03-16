@@ -1,0 +1,72 @@
+.containerLogin {
+    display: flex;
+    background: #7700ff;
+    max-width: 50%;
+    margin: 35px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 85vh;
+    background-color: #f9f9f9;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerLogin h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.containerLogin form div {
+    margin-bottom: 15px;
+}
+
+.containerLogin form div span {
+    display: inline-block;
+    width: 80px;
+    font-weight: bold;
+}
+
+.containerLogin form div input {
+    width: calc(100% - 90px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.containerLogin form button[type="submit"],
+.containerLogin div button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.containerLogin form button[type="submit"]:hover,
+.containerLogin div button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.containerLogin div {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.containerLogin div button {
+    padding: 8px 20px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.containerLogin div button:hover {
+    text-decoration: underline;
+}

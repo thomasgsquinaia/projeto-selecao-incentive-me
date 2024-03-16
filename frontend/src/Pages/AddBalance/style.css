@@ -1,0 +1,25 @@
+.containerHome {
+    display: flex;
+    flex-direction: column;
+}
+
+.content{ 
+    display: flex;
+}
+
+.content-addpayment {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Style Button */
+.button-addpayment {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    align-items: end;
+}

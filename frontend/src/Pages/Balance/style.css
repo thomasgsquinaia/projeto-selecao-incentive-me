@@ -1,0 +1,24 @@
+.containerHome {
+    display: flex;
+    flex-direction: column;
+}
+
+.content{ 
+    display: flex;
+}
+
+.content-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.button-add {
+    padding: 10px;
+}
+
+.create-init {
+    text-align: center;
+}

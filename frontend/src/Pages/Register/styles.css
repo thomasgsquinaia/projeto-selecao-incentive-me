@@ -1,0 +1,79 @@
+.containerLogin {
+    background: #7700ff; ;
+    max-width: 50%;
+    margin: 35px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 85vh;
+    background-color: #f9f9f9;
+}
+
+.containerLogin h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.containerLogin form div {
+    width: 40vw;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerLogin form div span {
+    display: inline;
+    width: 100px;
+    font-weight: bold;
+}
+
+.containerLogin form div input {
+    width: calc(100% - 110px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.containerLogin form div.error {
+    color: red;
+    font-size: 14px;
+}
+
+.containerLogin form div.error input {
+    border-color: red;
+}
+
+.containerLogin form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.containerLogin form button:hover {
+    background-color: #0056b3;
+}
+
+.containerLogin div span {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.containerLogin div span button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.containerLogin div span button:hover {
+    text-decoration: underline;
+}

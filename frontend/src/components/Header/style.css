@@ -1,0 +1,10 @@
+.containerHeader {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #7700ff;
+    color: white;
+}
+

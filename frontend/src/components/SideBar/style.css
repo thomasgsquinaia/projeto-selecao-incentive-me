@@ -1,0 +1,36 @@
+.containerSideBar {
+    background-color: rgb(36, 36, 36);
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    height: 91vh;
+}
+
+.containerSideBar p { 
+    margin: 0;
+    color: white;
+    cursor: pointer;
+    margin: 20px 0px 10px 0px;
+    font-size: 16px;
+    border-bottom: 2px solid #fff;
+}
+
+.containerSideBar a { 
+    text-decoration: none;
+}
+
+.containerSideBar button {
+    background-color: rgb(36, 36, 36) ;
+    border: none;
+    cursor: pointer;
+}
+
+
+.selectLink, .selectLink p {
+    background-color: white !important;
+    color: black !important;
+    border-radius: 10px;
+    padding-left: 5px;
+}
