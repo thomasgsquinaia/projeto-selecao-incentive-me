@@ -4,7 +4,7 @@ import { PaymentsData } from "./interface/payments";
 import { UsersData } from "./interface/users";
 
 // export const BASE_API = 'http://localhost:3001/v1';
-export const BASE_API = 'https://projeto-selecao-incentive-me.onrender.com';
+export const BASE_API = 'https://projeto-selecao-incentive-me.onrender.com/v1';
 
 type Login = {
     email: string;
