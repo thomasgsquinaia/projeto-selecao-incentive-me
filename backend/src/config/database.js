@@ -4,7 +4,8 @@ const dbconfig={
     password: process.env.PASSWORD,
     database: process.env.DATABASE,
     port: 5432,
-    dialect: "postgres"
+    dialect: "postgres",
+    ssl: false
 }
 
 module.exports = dbconfig
