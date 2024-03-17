@@ -21,7 +21,7 @@ module.exports = {
             if (!user || !user.rows[0]) {
                 throw { message: "User doesn't exist", status: 400 };
             }
-            const { password: hashedPassword, id } = user.rows[0]; // Assuming user.rows[0] contains the user data
+            const { password: hashedPassword, id } = user.rows[0];
             const checkPassword = await decryptPassword(password, hashedPassword);
             if (!checkPassword) {
                 throw { message: "Invalid password", status: 401 };
