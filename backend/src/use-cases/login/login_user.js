@@ -27,8 +27,8 @@ module.exports = {
                 throw { message: "Invalid password", status: 401 };
             }
             const token = generateToken({
-                email: user.email,
-                id: user.id
+                email: user.rows[0].email,
+                id: user.rows[0].id
             });
             const result = {
                 id: id,
