@@ -30,6 +30,8 @@ npm install
 npm run dev
 ```
 
+4. Criar um arquivo .env como o de exemplo do projeto para rodar um banco PostgreSQL localmente.
+
 ## API Endpoints
 A API fornece os seguintes endpoints:
 
