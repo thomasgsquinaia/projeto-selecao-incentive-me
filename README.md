@@ -59,7 +59,8 @@ DELETE /v1/balance/:id - Deleta um saldo - {id}.
 $ npm install
 ```
 
-2. Caso queira após instalar as dependências, entre no arquivo Api.ts e altere a BASE_API para a (http://localhost:3001/v1)
+2. Entre no arquivo Api.ts e altere a BASE_API para a (http://localhost:3001/v1) 
+
 
 3. Rodar o projeto: 
 
