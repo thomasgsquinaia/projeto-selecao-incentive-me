@@ -18,7 +18,6 @@ export async function LoginUser(props: Login) {
             email: props.email,
             password: props.password,
         });
-        console.log('API loginUser: ',response);
         return response.data;
     } catch (error) {
         return { error: error };

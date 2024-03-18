@@ -8,15 +8,12 @@ interface LoginForm {
     email: string;
     password: string;
 }
-interface LoginResponse {
-    token: string;
-}
+
 export default function Login() {
     const navigate = useNavigate();
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [popupMessage, setPopupMessage] = useState('');
     const [loading, setLoading] = useState(false);
-
     const [formData, setFormData] = useState<LoginForm>({
         email: '',
         password: ''
@@ -41,20 +38,28 @@ export default function Login() {
         try {
             setLoading(true)
             const response = await LoginUser(formData);
-            const data: LoginResponse = response;
-            const { token } = data;
-            console.log('token do user',token);
-            localStorage.setItem('token', token);
-            localStorage.setItem('response', token);
-            setLoading(false)
-            navigate("/payments")
-        } catch (error) {
+            const { token } = response;
+            if(token) {
+                localStorage.setItem('token', token);
+                localStorage.setItem('response', token);
+                navigate("/payments")
+            } 
+            else { 
+                setPopupMessage("Usuário inexistente!")
+                setIsPopupOpen(true)
+            }
+        } catch (error:any) {
+            if (error.response && error.response.data && error.response.data.message) {
+                setPopupMessage(error.response.data.message);
+            }
             if(error) {
                 console.error('Erro ao fazer login:', error);
                 setPopupMessage("Erro inesperado")
                 setIsPopupOpen(true)
                 return
             }
+        } finally {
+            setLoading(false)
         }
     };
 
@@ -74,7 +79,7 @@ export default function Login() {
                 </div>
                 <div>
                     <button type="submit" disabled={loading}>Entrar</button>
-                    {loading && <div>Carregando...</div>}
+                    {loading && <div className='loading'>Carregando...</div>}
                 </div>
                 
             </form>
