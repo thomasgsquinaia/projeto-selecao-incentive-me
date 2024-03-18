@@ -9,6 +9,7 @@ Link para o projeto: https://projeto-selecao-incentive-me.vercel.app/
 - [Instalação API](#instalação-api)
 - [API Endpoints](#api-endpoints)
 - [Instalação Frontend](#instalação-frontend)
+- [Sobre](#sobre)
 
 ## Instalação API
 
