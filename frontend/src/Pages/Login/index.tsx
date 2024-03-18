@@ -8,12 +8,15 @@ interface LoginForm {
     email: string;
     password: string;
 }
-
+interface LoginResponse {
+    token: string;
+}
 export default function Login() {
     const navigate = useNavigate();
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [popupMessage, setPopupMessage] = useState('');
-  
+    const [loading, setLoading] = useState(false);
+
     const [formData, setFormData] = useState<LoginForm>({
         email: '',
         password: ''
@@ -36,9 +39,14 @@ export default function Login() {
             return;
         }
         try {
+            setLoading(true)
             const response = await LoginUser(formData);
-            const { token } = response;
+            const data: LoginResponse = response;
+            const { token } = data;
+            console.log('token do user',token);
             localStorage.setItem('token', token);
+            localStorage.setItem('response', token);
+            setLoading(false)
             navigate("/payments")
         } catch (error) {
             if(error) {
@@ -65,7 +73,8 @@ export default function Login() {
                     <input type="password" name="password" value={formData.password} onChange={handleInputChange} />
                 </div>
                 <div>
-                    <button type="submit">Entrar</button>
+                    <button type="submit" disabled={loading}>Entrar</button>
+                    {loading && <div>Carregando...</div>}
                 </div>
                 
             </form>

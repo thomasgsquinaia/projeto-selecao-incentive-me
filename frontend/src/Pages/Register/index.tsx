@@ -11,7 +11,6 @@ interface UsersData {
     confirmPassword: string;
     active?: boolean;
 }
-
 interface FormErrors {
     name?: string;
     email?: string;
@@ -29,6 +28,7 @@ export default function Register() {
     });
 
     const [errors, setErrors] = useState<FormErrors>({});
+    const [loading, setLoading] = useState(false);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -39,11 +39,12 @@ export default function Register() {
         e.preventDefault();
         const validationErrors = validateForm(formData);
         if (Object.keys(validationErrors).length === 0) {
+            setLoading(true);
             try {
                 await addFirstUser(formData);
+                setLoading(false);
                 navigate("/login")
             } catch (error) {
-                console.log('Erro ao cadastrar usuário:', error);
                 return {error : error}
             }
         } else {
@@ -95,7 +96,8 @@ export default function Register() {
                     {errors.confirmPassword && <span className="error">{errors.confirmPassword}</span>}
                 </div>
                 <div>
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" disabled={loading}>Cadastrar</button>
+                    {loading && <div>Carregando...</div>}
                 </div>
             </form>
             <div>
