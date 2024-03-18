@@ -19,12 +19,19 @@ module.exports = {
             const { email, password } = input;
             const user = await userRepository.findUserBy(email);
             if (!user || !user.rows[0]) {
-                throw { message: "User doesn't exist", status: 400 };
+                throw { 
+                    message: "User doesn't exist", 
+                    status: 400 
+                };
             }
+            
             const { password: hashedPassword, id } = user.rows[0];
             const checkPassword = await decryptPassword(password, hashedPassword);
             if (!checkPassword) {
-                throw { message: "Invalid password", status: 401 };
+                throw { 
+                    message: "Invalid password", 
+                    status: 401 
+                };
             }
             const token = generateToken({
                 email: user.rows[0].email,

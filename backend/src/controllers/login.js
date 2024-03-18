@@ -42,7 +42,10 @@ module.exports = {
       try {
         const database = await connect()
         const usersrepository = new UsersDatabaseRepository(database)
-        const input = { email: req?.body.email, password: req?.body.password}
+        const input = { 
+          email: req?.body.email, 
+          password: req?.body.password
+        }
         useCaseLoginUser.verifyInput(input)
         const result = await useCaseLoginUser.loginUser(input,usersrepository)
         return res.status(200).json(result)

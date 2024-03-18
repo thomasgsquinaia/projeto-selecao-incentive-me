@@ -24,7 +24,7 @@ module.exports = {
         return res.status(200).json(result)
       } 
       catch (err) {
-        console.log('erro aqui => ',err);
+        console.log(err);
         let statusCode = err.status || 500
         return res.status(statusCode).json(err)
       }

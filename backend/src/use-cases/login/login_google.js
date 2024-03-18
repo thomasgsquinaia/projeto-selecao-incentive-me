@@ -20,7 +20,6 @@ module.exports = {
         try {
             const { id_token }=input
             const { data }=await axios.get(`${google_url}${id_token}`)
-            console.log(data);
             if(!data){
                 throw({
                     message:"Couldn't retrieve info from google token!",
@@ -29,7 +28,6 @@ module.exports = {
             }
             const {email:tokenEmail,name:tokenName,picture,given_name,family_name} = data
             const user = await usersrepository.findUserBy(tokenEmail,false);
-            console.log(user);
             if(!user){
                 const NewUser={email:tokenEmail,name:tokenName,picture,given_name,family_name}
                 return NewUser
@@ -67,7 +65,7 @@ module.exports = {
 
             return result;
         } catch (err) {
-          console.log('err: ',err);
+          console.log(err);
           throw(err);
         }
     }
