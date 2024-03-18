@@ -7,10 +7,10 @@ const dbconfig={
     dialect: "postgres"
 }
 
-if (process.env.NODE_ENV == "dev") {
-    dbconfig.ssl = false;
-} else {
+if (process.env.NODE_ENV == "prod") {
     dbconfig.ssl = true;
+} else {
+    dbconfig.ssl = false;
 }
 
 module.exports = dbconfig
