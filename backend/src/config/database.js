@@ -6,7 +6,7 @@ const dbconfig={
     port: 5432,
     dialect: "postgres",
     ssl: {
-        rejectUnauthorized: false
+        rejectUnauthorized: true
     }
     // ssl: true
 }
