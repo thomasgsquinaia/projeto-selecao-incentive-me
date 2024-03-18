@@ -1,39 +1,72 @@
-# 🚀 Venha participar do nosso time campeão!
+# Payment Bank
 
-Ao conhecer uma pessoa que está aplicando para a Incentive.me gostamos de ter uma conversa sobre código. Afinal, escrever, ler e discutir sobre código faz parte da nossa rotina diária de trabalho.
+Este projeto foi construido com **NodeJs, JavaScript, PostgreSQL, ReactJs e TypeScript.**
 
-Você pode implementar o projeto usando qualquer linguagem de sua preferência. Lembre-se: use a linguagem com a qual você tem mais familiaridade.
+Link para o projeto: https://projeto-selecao-incentive-me.vercel.app/
 
-## O que vamos avaliar?
+## Índice
 
-- Comunicação na revisão do código;
-- Argumentos sobre desafios enfrentados e escolhas realizadas na implementação;
-- Código bem escrito, limpo e coeso;
-- Arquitetura e princípios de desenvolvimento;
-- Documentação (README.md) com instruções claras para reproduzir o projeto;
-- Uso adequado de versionamento do código em git;
-- Uso de testes automatizados;
-- Deploy da aplicação;
-- O design da API RESTful é implementado, usando corretamente os verbos HTTP e o código de status apropriado;
-- Uso adequado de HTML5, CSS3 e JavaScript em um front-end minimamente estruturado;
+- [Instalação API](#instalação-api)
+- [API Endpoints](#api-endpoints)
+- [Instalação Frontend](#instalação-frontend)
 
-Caso você não se sinta confortável com algum desses itens, tudo bem, apenas nos fale sobre isso, ok? O objetivo aqui não é te fazer perder tempo com algo irrelevante. Nosso objetivo aqui é ter um código sobre o qual podemos conversar. Como você deve ter notado, a gente preza muito por colaboração, trabalho em time e comunicação. O objetivo aqui é ter, minimamente, essa experiência com você.
+## Instalação API
 
-Respeite o seu nível de conhecimento e experiência, o importante é você saber dizer o motivo das suas escolhas. Se você tiver qualquer dúvida, por favor, entre em contato com a gente. Estamos disponíveis para te ajudar a finalizar esse processo.
+1. Clonar o repositório:
 
-# Opções de projetos
+```bash
+git clone https://github.com/thomasgsquinaia/projeto-selecao-incentive-me.git
+```
 
-A seguir seguem algumas ideias de projetos que você pode implementar:
+2. Ir para o diretório ./backend e digitar:
 
-- [Cliente para o GitHub](https://github.com/incentive-me/projeto-selecao/blob/master/projects/GITHUB.md);
-- [Sistema de pagamentos](https://github.com/incentive-me/projeto-selecao/blob/master/projects/PAGAMENTOS.md).
-- **Projeto open source próprio**: Se você tiver algum projeto pronto, que tenha relação com desenvolvimento Web, você pode apresentá-lo na entrevista. Conte-nos sobre suas motivações ao criá-lo, os desafios técnicos e não técnicos enfretados etc. O objetivo aqui é poupar seu tempo
-e evitar que você tenha que criar outro projeto, caso já tenha um.
+```bash
+npm install
+```
 
-# Como compartilhar o projeto conosco
+3. Rodar o projeto:
 
-1. Apague este README.md e adicione informações que achar relevante como configurar o projeto, contendo os comandos que devem ser executados para executar ele e os testes;
-2. Abra um PR apontando para a branch master deste repositório;
-3. Escreva qualquer consideração na descrição do PR e faça qualquer comentário que achar pertinente no código.
+```bash
+npm run dev
+```
 
-**OBS.:** Caso queira nos mostra um projeto open source próprio, abra uma issue nesse repositório aqui, colocando links e informações sobre o seu projeto de forma que possamos avaliá-lo.
+## API Endpoints
+A API fornece os seguintes endpoints:
+
+**API PAGAMENTOS**
+```markdown
+GET /v1/payments - Lista pagamentos.
+POST /v1/payments - Cria um pagamento - {nome, descrição, valor, saldo_id}.
+PUT /v1/payments - Atualiza um pagamento - {id, name}.
+DELETE /v1/payments/:id - Deleta um pagamento - {id}.
+```
+
+**API SALDOS**
+```markdown
+GET /v1/balance - Lista saldos.
+POST /v1/balance - Cria um saldo - {nome, descrição, valor}.
+PUT /v1/balance - Atualiza um saldo - {id, nome}.
+DELETE /v1/balance/:id - Deleta um saldo - {id}.
+```
+
+## Instalação Frontend
+
+1. Ir para o diretório ./frontend e digitar: 
+
+```bash
+$ npm install
+```
+
+2. Caso queira após instalar as dependências, entre no arquivo Api.ts e altere a BASE_API para a [localhost](http://localhost:3001/v1)
+
+3. Rodar o projeto: 
+
+```bash
+$ npm run dev
+```
+
+
+
+## Sobre
+
+Linkedin: https://www.linkedin.com/in/thomas-quinaia-82b5221b1/
