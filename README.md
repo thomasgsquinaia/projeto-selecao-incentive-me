@@ -1,4 +1,4 @@
-# Payment Bank
+# Payments Bank
 
 Este projeto foi construido com **NodeJs, JavaScript, PostgreSQL, ReactJs e TypeScript.**
 
